@@ -363,7 +363,7 @@ body:has(button:hover) #cursor-ring {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
   border: 3px solid var(--bg-alt);
   box-shadow: var(--shadow-lg);
   position: relative;
