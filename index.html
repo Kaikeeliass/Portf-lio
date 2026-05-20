@@ -1,311 +1,440 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaike Elias | Desenvolvedor Full-Stack</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaike Elias · Desenvolvedor Full-Stack</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <!-- HERO -->
-    <header class="hero" id="top">
-        <div class="container hero-content">
-            <div class="hero-center">
-                <img src="kaike.jpeg" alt="Foto de Kaike Elias" class="foto">
-            </div>
-            <div class="hero-right">
-                <span class="hero-label">Desenvolvedor em formação · Full-Stack</span>
-                <h1>Olá, eu sou Kaike Elias</h1>
-                <p id="typing" class="typing">
-                    Desenvolvedor Full-Stack | Empreendedor | Apaixonado por tecnologia e inovação
-                </p>
 
-                <div class="hero-actions">
-                    <a href="index1.html" target="_blank" class="btn primary">Ver projetos</a>
-                    <a href="#contact" class="btn ghost">Entrar em contato</a>  
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- CURSOR -->
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <span class="logo">Kaike Oliveira</span>
-            <ul>
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#top" class="nav-logo">Kaike<span>.Oliveira</span></a>
+            <ul class="nav-links">
                 <li><a href="#about">Sobre</a></li>
-                <li><a href="#soft-skills">Soft Skills</a></li>
-                <li><a href="#hard-skills">Hard Skills</a></li>
+                <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#projects">Projetos</a></li>
                 <li><a href="#experience">Experiência</a></li>
-                <li><a href="#contact">Contato</a></li>
-                <li><button id="theme-toggle" aria-label="Alternar tema">🌙</button></li>
+                <li><a href="#contact" class="nav-cta">Contato</a></li>
             </ul>
+            <button id="theme-toggle" aria-label="Alternar tema">
+                <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#about">Sobre</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#projects">Projetos</a>
+            <a href="#experience">Experiência</a>
+            <a href="#contact">Contato</a>
         </div>
     </nav>
 
-    <!-- SOBRE MIM -->
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <div class="hero-bg">
+            <div class="hero-grid-lines"></div>
+            <div class="hero-orb orb-1"></div>
+            <div class="hero-orb orb-2"></div>
+        </div>
+        <div class="hero-inner">
+            <div class="hero-photo-col">
+                <div class="photo-frame">
+                    <img src="kaike.jpeg" alt="Kaike Elias" class="hero-photo" />
+                    <div class="photo-ring"></div>
+                    <div class="photo-badge">
+                        <span class="badge-dot"></span> Disponível para projetos
+                    </div>
+                </div>
+            </div>
+            <div class="hero-text-col">
+                <span class="hero-chip">Desenvolvedor em formação · Full-Stack</span>
+                <h1 class="hero-title">
+                    Olá, eu sou<br />
+                    <span class="hero-name">Kaike Elias</span>
+                </h1>
+                <p class="hero-sub" id="typing-target">Transformo ideias em sistemas reais — do banco de dados à
+                    interface.</p>
+                <div class="hero-actions">
+                    <a href="index1.html" class="btn-primary">Ver projetos →</a>
+                    <a href="#contact" class="btn-outline">Falar comigo</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-n">2+</span><span class="stat-l">Anos estudando</span></div>
+                    <div class="stat-div"></div>
+                    <div class="stat"><span class="stat-n">5+</span><span class="stat-l">Projetos entregues</span></div>
+                    <div class="stat-div"></div>
+                    <div class="stat"><span class="stat-n">3</span><span class="stat-l">Stacks dominadas</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Role para baixo</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
     <section id="about" class="section">
-        <div class="container about-grid">
-            <div class="txt">
-                <h2>Sobre mim</h2>
-                <p>
-                    Sou Kaike Elias, desenvolvedor full-stack em formação e empreendedor movido por tecnologia,
-                    inovação e impacto social. Estudo no IFSP (Técnico em Informática) e no Dinorath do Valle
-                    (Técnico em Administração), construindo uma base sólida em desenvolvimento de sistemas,
-                    lógica, banco de dados e gestão.
-                </p>
-
-                <p>
-                    Gosto de transformar ideias em soluções reais. Já desenvolvi sistemas completos como o
-                    <strong>Sistema de Gestão Escolar</strong> no Galera Tech e estou construindo a startup
-                    <strong>GRAI EcoSystems</strong>, focada em conectar empresas que geram resíduos com
-                    empresas que compram esses materiais, usando tecnologia para resolver um problema ambiental
-                    e de gestão ao mesmo tempo.
-                </p>
-
-                <p>
-                    Me destaco por unir visão técnica e visão de produto: entendo o problema, estudo o usuário,
-                    desenho o fluxo, modelo o banco, desenvolvo o back e o front e entrego a solução ponta a ponta.
-                    Sigo em constante evolução, aprendendo todos os dias e buscando sempre o próximo nível.
-                </p>
-            </div>
-
-            <div class="about-highlights">
-                <h3>Em poucas linhas</h3>
-                <ul>
-                    <li>💻 Desenvolvedor full-stack em formação (front + back + banco de dados)</li>
-                    <li>🚀 Empreendedor e criador da startup GRAI EcoSystems</li>
-                    <li>🏫 Experiência com projetos reais: Galera Tech, IFSP e sistemas internos</li>
-                    <li>📚 Mentalidade de crescimento contínuo e foco em solução de problemas</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOFT SKILLS -->
-    <section id="soft-skills" class="section light-bg">
         <div class="container">
-            <h2>Soft Skills</h2>
-            <p class="section-subtitle">
-                Além da parte técnica, invisto muito em habilidades comportamentais que fazem diferença em times e
-                projetos reais.
-            </p>
-
-            <div class="skills-grid">
-                <div class="skill-item soft">
-                    <h3>Comunicação</h3>
-                    <p>Consigo explicar conceitos técnicos de forma simples para colegas, professores e pessoas não
-                        técnicas.</p>
+            <div class="section-head reveal">
+                <span class="section-label">Quem sou eu</span>
+                <h2 class="section-title">Sobre <span>mim</span></h2>
+            </div>
+            <div class="about-layout">
+                <div class="about-text reveal">
+                    <p>Sou <strong>Kaike Elias</strong>, desenvolvedor full-stack em formação e empreendedor movido por
+                        tecnologia, inovação e impacto social. Estudo no <strong>IFSP</strong> (Técnico em Informática)
+                        e no <strong>Dinorath do Valle</strong> (Técnico em Administração), construindo uma base sólida
+                        em desenvolvimento de sistemas, lógica, banco de dados e gestão.</p>
+                    <p>Gosto de transformar ideias em soluções reais. Já desenvolvi sistemas completos como o
+                        <strong>Sistema de Gestão Escolar</strong> no Galera Tech e estou construindo a startup
+                        <strong>GRAI EcoSystems</strong>, focada em conectar empresas que geram resíduos com empresas
+                        que compram esses materiais.</p>
+                    <p>Me destaco por unir <strong>visão técnica e visão de produto</strong>: entendo o problema, estudo
+                        o usuário, modelo o banco, desenvolvo o back e o front e entrego a solução ponta a ponta.</p>
                 </div>
-                <div class="skill-item soft">
-                    <h3>Trabalho em equipe</h3>
-                    <p>Experiência em projetos em grupo, tanto na escola quanto em cursos e startups.</p>
-                </div>
-                <div class="skill-item soft">
-                    <h3>Visão de produto</h3>
-                    <p>Olho para além do código: penso em experiência do usuário, valor de negócio e impacto real.</p>
-                </div>
-                <div class="skill-item soft">
-                    <h3>Proatividade</h3>
-                    <p>Não espero o problema aparecer: antecipo, testo, melhoro e proponho soluções.</p>
-                </div>
-                <div class="skill-item soft">
-                    <h3>Organização</h3>
-                    <p>Divido grandes projetos em etapas, organizo tarefas e cumpro prazos.</p>
-                </div>
-                <div class="skill-item soft">
-                    <h3>Aprendizagem rápida</h3>
-                    <p>Me adapto bem a novas tecnologias, frameworks e formas de trabalhar.</p>
+                <div class="about-cards reveal">
+                    <div class="about-card">
+                        <div class="about-card-icon">💻</div>
+                        <div>
+                            <strong>Full-Stack em formação</strong>
+                            <p>Front + Back + Banco de dados</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">🚀</div>
+                        <div>
+                            <strong>Empreendedor</strong>
+                            <p>Criador da startup GRAI EcoSystems</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">🏫</div>
+                        <div>
+                            <strong>Projetos reais</strong>
+                            <p>Galera Tech, IFSP e sistemas internos</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">📚</div>
+                        <div>
+                            <strong>Crescimento contínuo</strong>
+                            <p>Foco em solução de problemas</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- HARD SKILLS -->
-    <section id="hard-skills" class="section">
+    <!-- HABILIDADES -->
+    <section id="skills" class="section alt-bg">
         <div class="container">
-            <h2>Hard Skills</h2>
-            <p class="section-subtitle">
-                Minhas principais tecnologias, linguagens e ferramentas que utilizo para desenvolver sistemas completos
-                e transformar problemas reais em software funcional e escalável.
-            </p>
+            <div class="section-head reveal">
+                <span class="section-label">O que eu sei fazer</span>
+                <h2 class="section-title">Habilidades</h2>
+            </div>
 
-            <div class="hard-grid">
-                <div class="hard-column">
-                    <h3>Front-end</h3>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS, responsividade e layouts modernos</li>
-                        <li>JavaScript</li>
-                    </ul>
+            <div class="skills-tabs reveal">
+                <button class="tab-btn active" data-tab="hard">Hard Skills</button>
+                <button class="tab-btn" data-tab="soft">Soft Skills</button>
+            </div>
+
+            <div class="tab-content active" id="tab-hard">
+                <div class="hard-grid">
+                    <div class="hard-col reveal">
+                        <div class="hard-col-head">
+                            <span class="hard-icon">🎨</span>
+                            <h3>Front-end</h3>
+                        </div>
+                        <ul>
+                            <li><span class="tech-dot"></span>HTML5 semântico</li>
+                            <li><span class="tech-dot"></span>CSS3 — layouts modernos e responsividade</li>
+                            <li><span class="tech-dot"></span>JavaScript — interatividade e lógica</li>
+                            <li><span class="tech-dot"></span>Bootstrap — componentes e grids</li>
+                        </ul>
+                    </div>
+                    <div class="hard-col reveal">
+                        <div class="hard-col-head">
+                            <span class="hard-icon">⚙️</span>
+                            <h3>Back-end</h3>
+                        </div>
+                        <ul>
+                            <li><span class="tech-dot"></span>C# — sistemas desktop e web</li>
+                            <li><span class="tech-dot"></span>PHP — aplicações web dinâmicas</li>
+                            <li><span class="tech-dot"></span>Python — automações (em aprendizado)</li>
+                            <li><span class="tech-dot"></span>n8n — automação de fluxos</li>
+                        </ul>
+                    </div>
+                    <div class="hard-col reveal">
+                        <div class="hard-col-head">
+                            <span class="hard-icon">🗄️</span>
+                            <h3>Dados & Ferramentas</h3>
+                        </div>
+                        <ul>
+                            <li><span class="tech-dot"></span>SQL — modelagem e consultas</li>
+                            <li><span class="tech-dot"></span>UML — modelagem de sistemas</li>
+                            <li><span class="tech-dot"></span>Figma — UI Design e protótipos</li>
+                            <li><span class="tech-dot"></span>APIs REST — integração de serviços</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
 
-                <div class="hard-column">
-                    <h3>Back-end</h3>
-                    <ul>
-                        <li>C# - Sistemas desktop e web</li>
-                        <li>PHP - aplicações web</li>
-                        <li>Python - Iniciando estudos para automações</li>
-                    </ul>
-                </div>
-
-                <div class="hard-column">
-                    <h3>Banco de Dados & Ferramentas</h3>
-                    <ul>
-                        <li>SQL, modelagem e consultas</li>
-                        <li>UML e modelagem de sistemas</li>
-                        <li>Figma / UI Design</li>
-                    </ul>
+            <div class="tab-content" id="tab-soft">
+                <div class="soft-grid">
+                    <div class="soft-card reveal">
+                        <div class="soft-icon">💬</div>
+                        <h3>Comunicação</h3>
+                        <p>Explico conceitos técnicos de forma simples para qualquer audiência — técnica ou não.</p>
+                    </div>
+                    <div class="soft-card reveal">
+                        <div class="soft-icon">🤝</div>
+                        <h3>Trabalho em equipe</h3>
+                        <p>Experiência em projetos em grupo na escola, em cursos e no ambiente de startup.</p>
+                    </div>
+                    <div class="soft-card reveal">
+                        <div class="soft-icon">🔭</div>
+                        <h3>Visão de produto</h3>
+                        <p>Penso além do código: experiência do usuário, valor de negócio e impacto real.</p>
+                    </div>
+                    <div class="soft-card reveal">
+                        <div class="soft-icon">⚡</div>
+                        <h3>Proatividade</h3>
+                        <p>Antecipo problemas, testo hipóteses e proponho melhorias antes de ser solicitado.</p>
+                    </div>
+                    <div class="soft-card reveal">
+                        <div class="soft-icon">📋</div>
+                        <h3>Organização</h3>
+                        <p>Divido grandes projetos em etapas, organizo tarefas e cumpro prazos.</p>
+                    </div>
+                    <div class="soft-card reveal">
+                        <div class="soft-icon">🧠</div>
+                        <h3>Aprendizagem rápida</h3>
+                        <p>Me adapto bem a novas tecnologias, frameworks e formas de trabalhar.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- PROJETOS -->
-    <section id="projects" class="section light-bg">
+    <section id="projects" class="section">
         <div class="container">
-            <h2>Projetos em Destaque</h2>
-            <p class="section-subtitle">
-                Alguns dos projetos que mais representam minha forma de pensar, desenvolver e entregar soluções.
-            </p>
-
+            <div class="section-head reveal">
+                <span class="section-label">O que eu construí</span>
+                <h2 class="section-title">Projetos em <span>Destaque</span></h2>
+                <p class="section-sub">Alguns projetos que representam minha forma de pensar, desenvolver e entregar.
+                </p>
+            </div>
             <div class="projects-grid">
-                <article class="project">
-                    <h3>GRAI EcoSystems — Plataforma de Gestão de Resíduos</h3>
-                    <p>
-                        Startup criada para conectar empresas que geram resíduos com empresas que compram materiais
-                        recicláveis. A plataforma inclui dashboards, cadastro de empresas, sistema de pedidos
-                        e visão administrativa.
-                    </p>
-                    <ul class="project-tags">
-                        <li>HTML - CSS - JS</li>
-                        <li>PHP</li>
-                        <li>SQL</li>
-                    </ul>
-                    <!-- <a href="#" class="project-link">Ver no GitHub</a> -->
+
+                <article class="project-card featured reveal">
+                    <div class="project-thumb" style="background: linear-gradient(135deg,#0d2e1a,#1a4d2e);">
+                        <span class="project-emoji">🌿</span>
+                        <span class="project-badge">Startup</span>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-cat">Plataforma Web · Sustentabilidade</span>
+                        <h3>GRAI EcoSystems</h3>
+                        <p>Startup criada para conectar empresas que geram resíduos com empresas que compram materiais
+                            recicláveis. Inclui dashboards, cadastros, sistema de pedidos e visão administrativa.</p>
+                        <div class="project-techs">
+                            <span>HTML/CSS/JS</span><span>PHP</span><span>SQL</span>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="project">
-                    <h3>Sistema de Chamada — Galera Tech</h3>
-                    <p>
-                        Sistema desenvolvido para registrar presença de alunos, com autenticação, níveis de acesso,
-                        dashboard e integração com banco de dados. Projeto final do curso Galera Tech.
-                    </p>
-                    <ul class="project-tags">
-                        <li>PHP</li>
-                        <li>MySQL</li>
-                        <li>HTML - CSS - JS</li>
-                    </ul>
+                <article class="project-card reveal">
+                    <div class="project-thumb" style="background: linear-gradient(135deg,#0a1e3c,#1a3a6e);">
+                        <span class="project-emoji">📋</span>
+                        <span class="project-badge">Sistema</span>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-cat">Back-end · Educação</span>
+                        <h3>Sistema de Chamada — Galera Tech</h3>
+                        <p>Sistema para registrar presença de alunos, com autenticação, níveis de acesso, dashboard e
+                            integração com banco de dados. Projeto final do curso.</p>
+                        <div class="project-techs">
+                            <span>PHP</span><span>MySQL</span><span>HTML/CSS/JS</span>
+                        </div>
+                    </div>
                 </article>
+
+                <article class="project-card reveal">
+                    <div class="project-thumb" style="background: linear-gradient(135deg,#1a0a2e,#3a1a6e);">
+                        <span class="project-emoji">🌐</span>
+                        <span class="project-badge">TCC</span>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-cat">Site Institucional · TCC 2025</span>
+                        <h3>Smart Office & Cantinho do Valle</h3>
+                        <p>Site institucional desenvolvido para o TCC com design moderno, animações, formulário
+                            integrado ao WhatsApp e identidade visual das duas marcas. Projeto aprovado com destaque.
+                        </p>
+                        <div class="project-techs">
+                            <span>HTML/CSS</span><span>Bootstrap</span><span>JS</span>
+                        </div>
+                        <a href="https://kaikeeliass.github.io/Site-Institucional---TCC/" target="_blank"
+                            class="project-link">Ver ao vivo →</a>
+                    </div>
+                </article>
+
+            </div>
+            <div class="projects-cta reveal">
+                <a href="index1.html" class="btn-primary">Ver todos os projetos →</a>
             </div>
         </div>
     </section>
 
     <!-- EXPERIÊNCIA -->
-    <section id="experience" class="section">
+    <section id="experience" class="section alt-bg">
         <div class="container">
-            <h2>Experiência</h2>
-            <p class="section-subtitle">
-                Um resumo da minha trajetória prática com tecnologia, projetos e empreendedorismo.
-            </p>
-
+            <div class="section-head reveal">
+                <span class="section-label">Minha trajetória</span>
+                <h2 class="section-title">Experiência</h2>
+                <p class="section-sub">Um resumo da minha jornada prática com tecnologia, projetos e empreendedorismo.
+                </p>
+            </div>
             <div class="timeline">
-                <div class="timeline-item">
-                    <span class="timeline-date">Fevereiro/2024 – Agosto/2025</span>
-                    <h3>Estagiário de RH — EMPRO Tecnologia</h3>
-                    <p>Atuação com sistemas internos, organização de processos e apoio à rotina do departamento de RH,
-                        convivendo diariamente com ambiente de tecnologia.</p>
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <span class="tl-date">Fev 2024 – Ago 2025</span>
+                        <h3>Estagiário de RH — EMPRO Tecnologia</h3>
+                        <p>Atuação com sistemas internos, organização de processos e apoio à rotina do departamento de
+                            RH, convivendo diariamente com ambiente de tecnologia.</p>
+                        <div class="tl-tags"><span>Sistemas internos</span><span>Processos</span><span>RH</span></div>
+                    </div>
                 </div>
-
-                <div class="timeline-item">
-                    <span class="timeline-date">Galera Tech</span>
-                    <h3>Curso de Programação e Soft Skills</h3>
-                    <p>Formação com foco em HTML, CSS, JS, PHP, SQL e desenvolvimento de projeto final premiado,
-                        criando um sistema de gestão escolar.</p>
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <span class="tl-date">Galera Tech</span>
+                        <h3>Curso de Programação e Soft Skills</h3>
+                        <p>Formação com foco em HTML, CSS, JS, PHP, SQL e desenvolvimento de projeto final premiado —
+                            sistema de gestão escolar completo.</p>
+                        <div class="tl-tags"><span>PHP</span><span>MySQL</span><span>JS</span></div>
+                    </div>
                 </div>
-
-                <div class="timeline-item">
-                    <span class="timeline-date">IFSP</span>
-                    <h3>Projeto Integrador</h3>
-                    <p>Desenvolvimento de sistemas com C#, SQL e UML, unindo teoria e prática em projetos estruturados.
-                    </p>
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <span class="tl-date">IFSP</span>
+                        <h3>Projeto Integrador</h3>
+                        <p>Desenvolvimento de sistemas com C#, SQL e UML, unindo teoria e prática em projetos
+                            estruturados com metodologia profissional.</p>
+                        <div class="tl-tags"><span>C#</span><span>SQL</span><span>UML</span></div>
+                    </div>
                 </div>
-
-                <div class="timeline-item">
-                    <span class="timeline-date">Atual</span>
-                    <h3>Empreendedor — GRAI EcoSystems</h3>
-                    <p>Criação da startup focada em gestão inteligente de resíduos, conectando empresas e usando
-                        tecnologia para resolver problemas ambientais.</p>
+                <div class="tl-item reveal">
+                    <div class="tl-dot active"></div>
+                    <div class="tl-content">
+                        <span class="tl-date">Atual</span>
+                        <h3>Empreendedor — GRAI EcoSystems</h3>
+                        <p>Criação da startup focada em gestão inteligente de resíduos, conectando empresas e usando
+                            tecnologia para resolver problemas ambientais reais.</p>
+                        <div class="tl-tags"><span>Startup</span><span>PHP</span><span>SQL</span><span>n8n</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CONTATO -->
-    <section id="contact" class="section light-bg">
-        <div class="container contact-grid">
-
-            <!-- Texto e links -->
-            <div>
-                <h2>Contato</h2>
-                <p class="section-subtitle">
-                    Quer conversar sobre oportunidades, projetos ou ideias?
-                    Estou sempre aberto para trocar uma ideia sobre tecnologia,
-                    negócios e inovação.
-                </p>
-
-                <div class="contact-links">
-                    <p><strong>E-mail:</strong> kaikeelias08@gmail.com</p>
-                    <p><strong>LinkedIn:</strong>
-                        <a href="https://br.linkedin.com/in/kaike-elias" target="_blank">
-                            linkedin.com/kaikeelias
-                        </a>
-                    </p>
-                    <p><strong>GitHub:</strong>
-                        <a href="https://github.com/Kaikeeliass" target="_blank">
-                            github.com/kaikeelias
-                        </a>
-                    </p>
-                </div>
+    <section id="contact" class="section contact-section">
+        <div class="contact-bg"></div>
+        <div class="container" style="position:relative;z-index:1;">
+            <div class="section-head reveal">
+                <span class="section-label" style="color:var(--accent-soft)">Vamos conversar</span>
+                <h2 class="section-title" style="color:#fff;">Entre em <span style="color:var(--accent)">Contato</span>
+                </h2>
+                <p class="section-sub" style="color:rgba(255,255,255,0.5)">Aberto para oportunidades, projetos e trocas
+                    sobre tecnologia.</p>
             </div>
-
-            <!-- Formulário -->
-            <form id="formContato" class="contact-form">
-                <div>
-                    <label for="nome">Seu Nome</label>
-                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+            <div class="contact-layout">
+                <div class="contact-info reveal">
+                    <div class="contact-item">
+                        <div class="c-icon">✉️</div>
+                        <div>
+                            <span class="c-label">E-mail</span>
+                            <a href="mailto:kaikeelias08@gmail.com" class="c-val">kaikeelias08@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="c-icon">💼</div>
+                        <div>
+                            <span class="c-label">LinkedIn</span>
+                            <a href="https://br.linkedin.com/in/kaike-elias" target="_blank"
+                                class="c-val">linkedin.com/in/kaike-elias</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="c-icon">🐙</div>
+                        <div>
+                            <span class="c-label">GitHub</span>
+                            <a href="https://github.com/Kaikeeliass" target="_blank"
+                                class="c-val">github.com/Kaikeeliass</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div>
-                    <label for="email">Seu E-mail</label>
-                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
-                </div>
-
-                <div>
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
-                </div>
-
-                <button type="submit" class="btn primary" style="width: 100%; border-radius: 10px;">
-                    Enviar pelo WhatsApp
-                </button>
-            </form>
-
+                <form id="formContato" class="contact-form reveal">
+                    <div class="form-group">
+                        <label>Seu Nome</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Seu E-mail</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Mensagem</label>
+                        <textarea id="mensagem" rows="4" placeholder="Sobre o que quer conversar?" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">💬 Enviar pelo WhatsApp</button>
+                </form>
+            </div>
         </div>
     </section>
 
-
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Kaike Elias. Todos os direitos reservados.</p>
-            <a href="#top" class="btn2" id="scrollTopBtn">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="18 15 12 9 6 15"></polyline>
+        <div class="container footer-inner">
+            <span class="footer-logo">Kaike<span>.Oliveira</span></span>
+            <p class="footer-copy">© <span id="year"></span> Kaike Oliveira · Todos os direitos reservados.</p>
+            <a href="#top" class="back-top" aria-label="Voltar ao topo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="18 15 12 9 6 15" />
                 </svg>
             </a>
         </div>
